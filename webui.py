@@ -1194,8 +1194,9 @@ def main():
     parser.add_argument("--theme", type=str, default="Ocean", choices=theme_map.keys(), help="Theme to use for the UI")
     args = parser.parse_args()
 
-    demo = create_ui(theme_name=args.theme)
-    demo.launch(server_name="0.0.0.0", server_port=80)
+    demo = create_ui(theme_name=args.theme)    
+    demo.launch(server_name="0.0.0.0", server_port=int(os.environ.get("PORT", 80)))
+
 
 
 if __name__ == '__main__':
