@@ -1195,7 +1195,7 @@ def main():
     args = parser.parse_args()
 
     demo = create_ui(theme_name=args.theme)
-    demo.launch(server_name=args.ip, server_port=args.port)
+    demo.launch(server_name="0.0.0.0", server_port=80)
 
 
 if __name__ == '__main__':
